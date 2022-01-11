@@ -34,6 +34,7 @@ function getUserinfo() {
                 return layui.layer.msg('获取用户信息失败');
             }
             renderAvatar(res.data);
+            console.log(res);
         },
         // 阻止通过 输入网页地址 进入后台页面的登录
         // 无论成功或者失败，都会调用 complete函数
@@ -60,7 +61,7 @@ function renderAvatar(user) {
     // 3.用户是否有头像决定渲染 文字头像还是自带头像
     if (user.user_pic !== null) {
         // 3.1渲染图片头像
-        $('.layui-nav-img').attr('src', 'user.user_pic').show();
+        $('.layui-nav-img').attr('src', user.user_pic).show();
         $('.text-avatar').hide();
     } else {
         // 3.2渲染文字头像
