@@ -34,7 +34,7 @@ function getUserinfo() {
                 return layui.layer.msg('获取用户信息失败');
             }
             renderAvatar(res.data);
-            console.log(res);
+            // console.log(res);
         },
         // 阻止通过 输入网页地址 进入后台页面的登录
         // 无论成功或者失败，都会调用 complete函数
